@@ -7,7 +7,7 @@ The project showcases a stylish coffee shop website with smooth animations, an i
 
 ## 🔗 Live Demo
 
-[View Live Project](LIVE_LINK_HERE)
+[View Live Project](https://new-cafe-landing-page.netlify.app/)
 
 ---
 
