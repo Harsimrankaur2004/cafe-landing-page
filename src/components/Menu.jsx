@@ -68,16 +68,16 @@ const Menu = () => {
 
   return (
     <section id="menu" className="py-28 px-10">
-      <h2 className="text-4xl font-bold text-center text-[#5C3A21] mb-16">
-        <motion.h2
+      <motion.h2 className="text-4xl font-bold text-center text-[#5C3A21] mb-16"
+        
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
           Popular Menu
-        </motion.h2>
-      </h2>
+        
+      </motion.h2>
 
       <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {menu.slice(0, visibleItems).map((item, i) => (
