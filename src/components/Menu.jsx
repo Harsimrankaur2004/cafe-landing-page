@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { a } from "framer-motion/client";
 import { useState } from "react";
 
 const Menu = () => {
@@ -68,15 +69,14 @@ const Menu = () => {
 
   return (
     <section id="menu" className="py-28 px-10">
-      <motion.h2 className="text-4xl font-bold text-center text-[#5C3A21] mb-16"
-        
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-        >
-          Popular Menu
-        
+      <motion.h2
+        className="text-4xl font-bold text-center text-[#5C3A21] mb-16"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true }}
+      >
+        Popular Menu
       </motion.h2>
 
       <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
@@ -87,13 +87,13 @@ const Menu = () => {
             transition={{ duration: 0.3 }}
             viewport={{ once: true }}
             key={i}
-            whileHover={{ y: -8 }}
+            whilelHover={{ y: -8 }}
             className="bg-white rounded-xl overflow-hidden shadow-md group"
           >
             <div className="overflow-hidden">
               <img
                 src={item.img}
-                className="h-52 w-full object-cover group-hover:scale-110 transition duration-500"
+                className="h-52 w-full object-cover group-lg:hover:scale-110 transition duration-500"
               />
             </div>
 
@@ -115,17 +115,19 @@ const Menu = () => {
         {visibleItems < menu.length ? (
           <button
             onClick={() => setVisibleItems(visibleItems + 3)}
-            className="px-6 py-3 bg-[#8B5E3C] text-white rounded-lg hover:bg-[#6B4226] transition cursor-pointer"
+            className="px-6 py-3 bg-[#8B5E3C] text-white rounded-lg lg:hover:bg-[#6B4226] transition cursor-pointer"
           >
             View More
           </button>
         ) : (
-          <button
-            onClick={() => setVisibleItems(3)}
-            className="px-6 py-3 bg-[#8B5E3C] text-white rounded-lg hover:bg-[#6B4226] transition"
-          >
-            Show Less
-          </button>
+          <a href="#menu">
+            <button
+              onClick={() => setVisibleItems(3)}
+              className="px-6 py-3 bg-[#8B5E3C] text-white rounded-lg lg:hover:bg-[#6B4226] transition"
+            >
+              Show Less
+            </button>
+          </a>
         )}
       </div>
     </section>

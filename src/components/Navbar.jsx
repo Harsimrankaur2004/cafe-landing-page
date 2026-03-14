@@ -21,7 +21,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li
               key={link.href}
-              className="cursor-pointer hover:text-[#8B5E3C] transition-colors duration-200"
+              className="cursor-pointer lg:hover:text-[#8B5E3C] transition-colors duration-200"
             >
               <a href={link.href}>{link.name}</a>
             </li>
@@ -56,7 +56,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="cursor-pointer hover:text-[#8B5E3C] transition-colors duration-200"
+              className="cursor-pointer lg:hover:text-[#8B5E3C] transition-colors duration-200"
             >
               {link.name}
             </a>
